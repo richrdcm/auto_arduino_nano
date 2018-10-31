@@ -7,5 +7,9 @@ Copy the libraries (MPU6050, I2Cdev,Adafruit_NeoPixel) to the arduino-1.6.9/libr
 
     /opt/arduino-1.8.5/hardware/tools/avr/bin/avrdude -C/opt/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -patmega328p -carduino -P/dev/ttyArduino -b57600 -D -Uflash:w:/root/main.ino.eightanaloginputs.hex:i
 
+For the new version of Arduinos, use this line instead:
+
+    /home/user/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino14/bin/avrdude -C/home/user/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino14/etc/avrdude.conf -v -patmega328p -carduino -P/dev/ttyArduino -b115200 -D -Uflash:w:/path/to/main.ino.hex:i
+
 ## Backup current installed firmware from arduino
     /opt/arduino-1.8.5/hardware/tools/avr/bin/avrdude -C/opt/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -patmega328p -carduino -P/dev/ttyArduino -b57600 -D -Uflash:r:/root/main.ino.backup.hex:i
